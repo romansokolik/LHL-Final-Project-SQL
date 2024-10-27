@@ -122,7 +122,7 @@ Order BY total_ordered DESC
 
 Answer:
 
-By referencing data from "Sales_Report" table I conclude that the top-selling items is clothing. 
+By referencing data from "Sales_Report" table I conclude that the top-selling item is clothing. 
 
 ---
 
