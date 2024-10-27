@@ -2,7 +2,7 @@ What issues will you address by cleaning the data?
 
 The issues:
 - Duplicated rows in the tables
-- Figure out the relationship between the table
+- Figure out the relationships between the tables
 - Find the right data types for columns with the values provided in CSV
 
 Queries:
