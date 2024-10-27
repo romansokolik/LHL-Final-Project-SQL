@@ -110,9 +110,19 @@ Is there any pattern in the types (product categories) of products ordered from 
 
 
 SQL Queries:
-
+```sql
+SELECT 
+	p.name,
+	total_ordered,
+	productsku
+FROM sales_report
+JOIN products p ON p.sku = productsku
+Order BY total_ordered DESC
+```
 
 Answer:
+
+By referencing data from "Sales_Report" table I conclude that the top-selling items is clothing. 
 
 ---
 
@@ -149,7 +159,7 @@ Answer:
 
 The top-selling product are "Dress Socks" sold in Madrid, Spain.
 
-Most of the purchases take place in USA.
+Most of the purchases take place in the USA.
 
 ---
 
@@ -158,12 +168,23 @@ Most of the purchases take place in USA.
 Can we summarize the impact of revenue generated from each city/country?**
 
 SQL Queries:
-
-
+```sql
+SELECT 
+	country,
+	city,
+	ROUND(revenue::DECIMAL/1000000, 2) AS revenue
+FROM analytics
+JOIN all_sessions USING(fullvisitorid)
+WHERE revenue::DECIMAL > 0
+AND city != 'not available in demo dataset'
+ORDER BY revenue DESC, country, city
+```
 
 Answer:
 
-
+Most of the purchases were made in the USA
+There has been alot of data on purchase but the location unknown.
+USA, San Francisco tops the table with $359.00 revenue.
 
 
 
