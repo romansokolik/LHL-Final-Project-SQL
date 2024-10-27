@@ -17,12 +17,14 @@ cte_sessions AS (
 		fullvisitorid AS vid,
 		country,
 		city, 
-		productsku AS sku
+		productsku AS sku,
+		productquantity::INT AS qty
 	FROM all_sessions
 	WHERE city NOT IN (
 		'not available in demo dataset', 
 		'(not set)'
 	)
+	AND productquantity::INT > 0
 ),
 
 cte_sales_by_sku AS (
@@ -50,8 +52,9 @@ cte_products AS (
 ```    
 
 
-**Question 1: Which cities and countries have the highest level of transaction revenues on the site?**
+** Question 1: 
 
+Which cities and countries have the highest level of transaction revenues on the site?**
 
 SQL Queries:
 ```sql
@@ -67,10 +70,12 @@ ORDER BY sum_of_transactions DESC
 
 Answer:
 
+---
 
 
+**Question 2: 
 
-**Question 2: What is the average number of products ordered from visitors in each city and country?**
+What is the average number of products ordered from visitors in each city and country?**
 
 
 SQL Queries:
@@ -88,37 +93,61 @@ ORDER BY country, city, avg_units_sold DESC
 
 Answer:
 
+---
 
 
+**Question 3: 
 
-
-**Question 3: Is there any pattern in the types (product categories) of products ordered from visitors in each city and country?**
-
-
-SQL Queries:
-
-
-
-Answer:
-
-
-
-
-
-**Question 4: What is the top-selling product from each city/country? Can we find any pattern worthy of noting in the products sold?**
+Is there any pattern in the types (product categories) of products ordered from visitors in each city and country?**
 
 
 SQL Queries:
 
 
-
 Answer:
 
+---
+
+**Question 4: 
+
+What is the top-selling product from each city/country? Can we find any pattern worthy of noting in the products sold?**
 
 
+SQL Queries:
+```sql
+SELECT 
+	country, 
+	city, 
+	sku, 
+	p.name,
+	times_sold,
+	MAX(total_sold) AS top_sales
+FROM (
+	SELECT
+		s.country,
+		s.city,
+		s.sku,
+		COUNT(s.sku) AS times_sold,
+		SUM(s.qty) AS total_sold
+	FROM cte_sessions s
+	GROUP BY s.country, s.city, s.sku
+	ORDER BY s.country, s.city, s.sku
+) as sessions
+JOIN cte_products p USING(sku)
+GROUP BY country, city, sku, p.name, total_sold, times_sold
+ORDER BY total_sold DESC, country, city
+```
+Answer:
 
+The top-selling product are "Dress Socks" sold in Madrid, Spain.
 
-**Question 5: Can we summarize the impact of revenue generated from each city/country?**
+Most of the purchases take place in USA.
+
+---
+
+**Question 5: 
+
+Can we summarize the impact of revenue generated from each city/country?**
 
 SQL Queries:
 
