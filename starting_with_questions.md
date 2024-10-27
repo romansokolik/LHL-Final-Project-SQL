@@ -6,7 +6,7 @@ cte_analytics AS (
 	SELECT DISTINCT
 		fullvisitorid AS vid,
 		units_sold::int,
-		revenue::DECIMAL
+		ROUND(revenue::DECIMAL/1000000, 2) AS revenue
 	FROM analytics
 	WHERE units_sold::int > 0
 	AND revenue::DECIMAL > 0
@@ -70,10 +70,15 @@ ORDER BY sum_of_transactions DESC
 
 Answer:
 
+The highest level for transaction revenues are in USA cities listed bellow:
+1. Seattle - $358.00
+2. New York - $164.00
+3. Mountain View - $16.99
+
 ---
 
 
-**Question 2: 
+**Question 2:
 
 What is the average number of products ordered from visitors in each city and country?**
 
@@ -90,8 +95,11 @@ GROUP BY country, city
 ORDER BY country, city, avg_units_sold DESC
 ```
 
-
 Answer:
+The averages of products ordered per cities in their countries are:
+- USA, Seattle - 2
+- USA, New York - 2
+- USA, Mountain View - 1
 
 ---
 
