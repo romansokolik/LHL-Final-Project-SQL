@@ -17,11 +17,11 @@ The goal is to process the data on files to create a working database and fit th
 At the first glance on the data I realized that there is no much info compared to the amount of the data supplied.
 There have been multiple columns with NULL or default entries.
 Content of the largest file in the set contains duplicated records exceeding 50% of the file.
+
+## Challenges
+[//]: # (&#40;discuss challenges you faced in the project&#41;)
 The same data is scattered into 2 or more files.
 Some data entries misled (i.e.) integer looking like piece of data is big for any integer type field. 
 
-## Challenges 
-(discuss challenges you faced in the project)
-
 ## Future Goals
-(what would you do if you had more time?)
+[//]: # (&#40;what would you do if you had more time?&#41;)
