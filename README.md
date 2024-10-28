@@ -13,7 +13,7 @@ The goal is to process the data on files to create a working database and fit th
 ### Load - move the content of the files to the well-structured environment - a database.
 
 ## Results
-(fill in what you discovered this data could tell you and how you used the data to answer those questions)
+[//]: # (&#40;fill in what you discovered this data could tell you and how you used the data to answer those questions&#41;)
 At the first glance on the data I realized that there is no much info compared to the amount of the data supplied.
 There have been multiple columns with NULL or default entries.
 Content of the largest file in the set contains duplicated records exceeding 50% of the file.
