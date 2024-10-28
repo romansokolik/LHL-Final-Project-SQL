@@ -8,8 +8,9 @@ The goal is to process the data on files to create a working database and fit th
 
 
 ## Process
-### (your step 1)
-### (your step 2)
+### Extract the data from CSV files.
+### Transform - try to make sense out of the data.
+### Load - move the content of the files to the well structured database.
 
 ## Results
 (fill in what you discovered this data could tell you and how you used the data to answer those questions)
