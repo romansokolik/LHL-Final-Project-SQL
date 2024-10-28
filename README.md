@@ -26,5 +26,7 @@
 
 ## Future Goals
 [//]: # (&#40;what would you do if you had more time?&#41;)
-Having spent linted time on, extracting, transforming, loading and analyzing the data quality I was able to get some feedbacks.
+Having spent limited time on, extracting, transforming, loading and analyzing the data quality, I was able to get some feedbacks.
 With every new attempt on getting information out of the data, we realize what should be done better and in what order the events would happen.
+For the upcoming task we will apply the knowledge and experiences gained from handling the project's requirements. 
+We should look into the future with optimism and believe that next time we will do it better.
