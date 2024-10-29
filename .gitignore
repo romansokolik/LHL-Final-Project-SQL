@@ -1,3 +1,4 @@
 DATA
 .idea
-queries.sql
+/queries.sql
+/Postgresql17-Installation-info.txt
