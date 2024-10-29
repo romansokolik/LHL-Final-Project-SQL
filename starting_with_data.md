@@ -80,7 +80,7 @@ SQL Queries:
 SELECT COUNT(*) FROM (
 	SELECT DISTINCT fullVisitorId, visitId
 	FROM all_sessions
-)
+) as sessions
 ```
 Answer:
 
