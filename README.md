@@ -21,7 +21,7 @@
 ## Challenges
 [//]: # (&#40;discuss challenges you faced in the project&#41;)
 - The same data is scattered into 2 or more files.
-- Some data entries misled (i.e.) integer looking like piece of data is big for any integer type field. 
+- Some data entries misled (i.e.) integer looking like piece of data is too big for any integer type field. 
 - It's been very difficult to refer to any tables for a piece of information because the same pieces are used in various places for unknown reasons.
 
 ## Future Goals
