@@ -1,4 +1,4 @@
-# Final-Project-Transforming-and-Analyzing-Data-with-SQL
+# Final Project Transforming and Analyzing Data with SQL
 
 ## Project/Goals
 - The Transforming and Analyzing Data with SQL Project is a great introduction to the SQL world.
