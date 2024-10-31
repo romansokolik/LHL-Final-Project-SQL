@@ -1,7 +1,7 @@
 # Final Project Transforming and Analyzing Data with SQL
 
 ## Description
-E-commerce data files representing online transactions and activities such as web-pages views.
+E-commerce data files representing online transactions and activities such as web-pages viewing.
 
 ## Project/Goals
 - The Transforming and Analyzing Data with SQL Project is a great introduction to the SQL world.
